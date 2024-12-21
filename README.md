@@ -31,6 +31,8 @@
 
 coc.nvim source for nerdfont icons.
 
+![screenshot](https://github.com/user-attachments/assets/1d12373d-0389-48cd-8ad2-771180f7a851)
+
 ## Install
 
 - [coc-marketplace](https://github.com/fannheyward/coc-marketplace)
