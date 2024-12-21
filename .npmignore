@@ -1,0 +1,7 @@
+/*
+!/lib/
+*.map
+!/prebuilds/
+!/binding.gyp
+!/binding.c
+!/flake.nix

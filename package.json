@@ -1,0 +1,47 @@
+{
+  "name": "coc-nerdfont",
+  "version": "0.0.1",
+  "description": "coc.nvim source for nerdfont icons",
+  "author": "Wu, Zhenyu <wuzhenyu@ustc.edu>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "coc.nvim"
+  ],
+  "engines": {
+    "coc": "^0.0.82"
+  },
+  "scripts": {
+    "generate": "scripts/generate-items.json.ts",
+    "watch": "node esbuild.mjs --watch",
+    "prepack": "node esbuild.mjs"
+  },
+  "devDependencies": {
+    "coc.nvim": "^0.0.83-next.18",
+    "esbuild": "^0.19.8",
+    "typescript": "^5.3.3"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "coc-nerdfont configuration",
+      "properties": {
+        "coc.source.nerdfont.enable": {
+          "type": "boolean",
+          "default": true
+        },
+        "coc.source.nerdfont.priority": {
+          "type": "integer",
+          "default": 1
+        },
+        "coc.source.nerdfont.shortcut": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    }
+  }
+}

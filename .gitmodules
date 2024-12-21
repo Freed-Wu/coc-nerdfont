@@ -1,0 +1,3 @@
+[submodule "nerdfix"]
+	path = nerdfix
+	url = https://github.com/loichyan/nerdfix
