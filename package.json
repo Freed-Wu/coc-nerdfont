@@ -13,7 +13,7 @@
   },
   "scripts": {
     "watch": "node esbuild.mjs --watch",
-    "prepack": "scripts/generate-items.json.mjs && node esbuild.mjs"
+    "prepack": "scripts/generate-items.json.js && node esbuild.mjs"
   },
   "devDependencies": {
     "coc.nvim": "^0.0.83-next.18",

@@ -1,14 +1,12 @@
 #!/usr/bin/env node
-import fs from "fs";
+const fs = require("fs");
 
-import icons from "../nerdfix/src/icons.json" assert { type: "json" };
-import substitutions from "../nerdfix/src/substitutions.json" assert { type: "json" };
-
-let _icons = icons.icons;
-let _substitutions = substitutions.substitutions;
+const icons = require("../nerdfix/src/icons.json").icons;
+const substitutions =
+  require("../nerdfix/src/substitutions.json").substitutions;
 
 function substitute(name) {
-  for (const substitution of _substitutions) {
+  for (const substitution of substitutions) {
     let [type, io] = substitution.split(":");
     let [input, output] = io.split("/");
     if (type === "exact" && input === name) return output;
@@ -18,7 +16,7 @@ function substitute(name) {
   return name;
 }
 
-let items = _icons.map((e) => ({
+let items = icons.map((e) => ({
   word: String.fromCharCode(Number("0x" + e.codepoint)),
   menu: e.name + (e.obsolete ? " -> " + substitute(e.name) : ""),
   filterText: e.name,
