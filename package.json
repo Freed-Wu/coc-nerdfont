@@ -12,9 +12,8 @@
     "coc": "^0.0.82"
   },
   "scripts": {
-    "generate": "scripts/generate-items.json.ts",
     "watch": "node esbuild.mjs --watch",
-    "prepack": "node esbuild.mjs"
+    "prepack": "scripts/generate-items.json.mjs && node esbuild.mjs"
   },
   "devDependencies": {
     "coc.nvim": "^0.0.83-next.18",
