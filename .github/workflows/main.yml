@@ -28,7 +28,6 @@ jobs:
           yarn
       - name: Build
         run: |
-          yarn generate
           yarn pack
         env:
           NODE_ENV: production
